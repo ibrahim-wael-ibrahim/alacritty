@@ -1,0 +1,95 @@
+# Alacritty configuration file
+
+# Font configuration
+[font]
+size = 11.25
+
+[font.normal]
+family = "MesloLGS NF"
+style = "Regular"
+
+[font.bold]
+family = "MesloLGS NF"
+style = "Bold"
+
+[font.italic]
+family = "MesloLGS NF"
+style = "Italic"
+
+[font.bold_italic]
+family = "MesloLGS NF"
+style = "Bold Italic"
+
+# Set the transparency level
+[window]
+opacity = 0.9
+padding = { x = 10, y = 10 }  # Add padding for better text readability
+
+# Scrollback configuration
+[scrolling]
+history = 10000  # Scrollback history limit
+
+# Primary colors
+[colors.primary]
+background = '#171421'
+foreground = '#D0CFCC'
+
+# Cursor colors
+[colors.cursor]
+text = '#FFFFFF'
+cursor = '#D8E9A8'
+
+# Normal colors
+[colors.normal]
+black   = '#171421'
+red     = '#C01C28'
+green   = '#26A269'
+yellow  = '#D8E9A8'
+blue    = '#4E9F3D'
+magenta = '#A347BA'
+cyan    = '#2AA1B3'
+white   = '#D0CFCC'
+
+# Bright colors
+[colors.bright]
+black   = '#5E5C64'
+red     = '#F66151'
+green   = '#33D17A'
+yellow  = '#E9AD0C'
+blue    = '#2A7BDE'
+magenta = '#C061CB'
+cyan    = '#34e2e2'
+white   = '#eeeeec'
+
+# Selection colors
+[colors.selection]
+text = "#171421"
+background = "#D8E9A8"
+
+# Cursor style configuration
+[cursor]
+style = "Block"  # Options: Block, Beam, Underline
+blink_interval = 750  # Milliseconds
+blink_timeout = 5  # Seconds
+unfocused_hollow = true
+thickness = 0.15
+
+# Terminal settings
+[terminal]
+osc52 = "OnlyCopy"  # Options: Disabled, OnlyCopy, OnlyPaste, CopyPaste
+
+# Mouse settings
+[mouse]
+hide_when_typing = false
+bindings = [
+    { mouse = "Right", mods = "Control", action = "Paste" },
+]
+
+
+# Keyboard bindings
+[keyboard]
+bindings = [
+    { key = "N", mods = "Control|Shift", action = "CreateNewWindow" },  # Create a new window with Ctrl + Shift + N
+    { key = "L", mods = "Control|Shift", chars = "l" },                # Write 'l' to the terminal with Ctrl + Shift + L
+    { key = "V", mods = "Control", action = "ToggleViMode" },          # Toggle Vi mode with Ctrl + V
+]
